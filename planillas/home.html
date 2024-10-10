@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Home - ONG-Crownfunding</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid navbar-margin">
+          <a class="navbar-brand" href="home.html"><img src="../image/logo.png" alt="" width="100px" height="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="crearCampañas.html">Crear Campaña</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Reforestación</a></li>
+                  <li><a class="dropdown-item" href="#">Conservación de Especies</a></li>
+                  <li><a class="dropdown-item" href="#">Educación Ambiental</a></li>
+                  <li><a class="dropdown-item" href="#">Energías Renovables</a></li>
+                  <li><a class="dropdown-item" href="#">Limpieza de Espacios Naturales</a></li>
+                  <li><a class="dropdown-item" href="#">Agricultura Sostenible</a></li>
+                  <li><a class="dropdown-item" href="#">Gestión de Residuos</a></li>
+                  <li><a class="dropdown-item" href="#">Cambio Climático</a></li>
+                  <li><a class="dropdown-item" href="#">Sostenibilidad Comunitaria</a></li>
+                  <li><a class="dropdown-item" href="#">Salud y Bienestar</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesion</button>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gestión de campañas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="gestion de campañas/campañas.html">Listar Campañas</a></li>
+                  <li><a class="dropdown-item" href="gestion de campañas/reportes.html">Reportes</a></li>
+                  <li><a class="dropdown-item" href="gestion de campañas/transacciones.html">Transacciones</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="tarjetas">
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de reforestación">
+          <div class="card-body">
+            <h5 class="card-title">Reforestación de Bosques</h5>
+            <p class="card-text">Ayúdanos a plantar 10,000 árboles en áreas deforestadas. Tu contribución hará la diferencia en la recuperación de nuestro ecosistema.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de limpieza de playas">
+          <div class="card-body">
+            <h5 class="card-title">Limpieza de Playas</h5>
+            <p class="card-text">Con tu apoyo, organizaremos jornadas de limpieza en nuestras playas para proteger la vida marina y mantener nuestros espacios limpios.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de educación ambiental">
+          <div class="card-body">
+            <h5 class="card-title">Educación Ambiental</h5>
+            <p class="card-text">Tu donación ayudará a financiar talleres educativos sobre sostenibilidad y cuidado del medio ambiente en escuelas locales.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de energías renovables">
+          <div class="card-body">
+            <h5 class="card-title">Energías Renovables</h5>
+            <p class="card-text">Contribuye a la instalación de paneles solares en comunidades rurales, brindando acceso a energía limpia y sostenible.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de conservación de especies">
+          <div class="card-body">
+            <h5 class="card-title">Conservación de Especies</h5>
+            <p class="card-text">Ayuda a proteger especies en peligro de extinción mediante la creación de reservas naturales y programas de reproducción.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 19rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Campaña de agricultura sostenible">
+          <div class="card-body">
+            <h5 class="card-title">Agricultura Sostenible</h5>
+            <p class="card-text">Con tu apoyo, implementaremos prácticas de agricultura sostenible en comunidades para promover la seguridad alimentaria.</p>
+            <a href="donar.html" class="btn btn-primary">Donar</a>
+          </div>
+        </div>        
+      </div>
+    </main>
+    <footer class="bg-light text-center footer p-3 start-50">
+      <p>© 2024 ONG-Crowdfunding. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">Iniciar Sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
+            </form>
+            <a class="simple" href="Registro.html">Crear cuenta</a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='home.html'">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'ongCrowndfunding/base.html' %}
+{% load static %}
+
+{% block 'title' %}
+<title>Gestión de Campañas - ONG-Crowdfunding</title>
+{% endblock %}
+    
+{% block 'content' %}
+        <h1>Gestión de Transacciones</h1>
+        <p>Visualiza y gestiona todas las transacciones realizadas en las campañas de la ONG.</p>
+
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>ID de Transacción</th>
+                    <th>Donante</th> 
+                    <th>Campaña</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transacciones in transacciones %} 
+                <tr>
+                    <td>{{ transacciones.id }}</td>
+                    <td>{{ transacciones.donante }}</td>
+                    <td>{{ transacciones.fundacion.nombre }}</td>
+                    <td>${{ transacciones.monto_donado }}</td>
+                    <td>{{ transacciones.fecha }}</td>
+                    <td>Completado</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

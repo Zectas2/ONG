@@ -1,0 +1,36 @@
+{% extends 'ongCrowndfunding/base.html' %}
+{% load static %}
+
+{% block 'title' %}
+<title>Reportes de Campañas - ONG-Crowdfunding</title>
+{% endblock %}
+    
+{% block 'content' %}
+        <h1>Reportes</h1>
+        <p>Reportes sobre el desempeño de las campañas, incluyendo estadísticas de donaciones y progreso hacia los objetivos de todas las campañas creadas por los usuarios registrados.</p>
+
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Campaña</th>
+                    <th>Fundador</th>
+                    <th>Objetivo</th>
+                    <th>Donaciones Recibidas</th>
+                    <th>Progreso (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fundaciones in fundaciones %} 
+                    <tr>
+                        <th><img src="{{ fundaciones.imagen }}" alt="" height="100px" width="150px"></th>
+                        <td>{{ fundaciones.nombre }}</td>
+                        <td>{{ fundaciones.fundador }}</td> 
+                        <td>{{ fundaciones.objetivo }}</td>
+                        <td>{{ fundaciones.total_donado }}</td>
+                        <td>None</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'ongCrowndfunding/base.html' %}
+
+{% block title %}
+<title>Crear Campañas - ONG-Crownfunding</title>
+{% endblock %}
+
+{% block 'content' %}
+<div class="CrearOngMain">
+  <h2>Formulario Create para las campañas/fundacion/ONGs</h2>
+  <br>
+  <div id="idMensajes">
+      {% if mensaje %}
+          {{ mensaje }}
+      {% endif %}
+  </div>
+  <form action="{% url 'CrearOng' %}" method="post">
+      {% csrf_token %}
+      <pre>Nombre: <input type="text" name="nombre"> </pre>
+      <pre>Descripción: <input type="text-area" name="descripcion"></pre>
+      <pre>Objetivo: <input type="text" name="objetivo"> </pre>
+      <pre>Imagen: <input type="text" name="imagen"> </pre>
+      <pre>Categoria: <select name="id_categoria">
+          {% for categoria in categorias %}
+              <option value="{{ categoria.id_categoria }}">{{ categoria.id_categoria }} - {{ categoria.nombre_categoria }}</option>
+          {% endfor %}
+      </select></pre>
+      <button type="submit">Crear Fundacion</button>
+  </form>
+</div>
+{% endblock %}

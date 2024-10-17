@@ -1,0 +1,26 @@
+{% extends 'ongCrowndfunding/base.html' %}
+{% load static %}
+
+{% block 'style' %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block 'title' %}
+    <title>Home - ONG-Crownfunding</title>
+{% endblock %}
+
+    {% block 'content' %}
+      
+      <div class="tarjetas">
+        {% for fundaciones in fundaciones %}
+          <div class="card" style="width: 19rem;">
+            <img src="{{ fundaciones.imagen }}" class="card-img-top" alt="Campaña de reforestación" height="250px" width="150px">
+            <div class="card-body">
+              <h5 class="card-title">{{ fundaciones.nombre }}</h5>
+              <p class="card-text">{{ fundaciones.descripcion }}</p>
+              <a href="{% url 'Donar' fundaciones.id %}" class="btn btn-primary">Donar</a>
+            </div>
+          </div>   
+        {% endfor %}   
+      </div>
+    {% endblock %}
+    

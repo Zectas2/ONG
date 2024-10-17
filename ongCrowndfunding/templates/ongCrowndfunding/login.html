@@ -1,0 +1,18 @@
+{% extends 'ongCrowndfunding/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Login - ONG-Crownfunding</title>
+{% endblock %}
+
+{% block 'content' %}
+  <section class="loginSection">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <div class="campo">
+          <button class="boton w-100 btn-success" type="submit">Ingresar</button>
+        </div>
+    </form>
+  </section>
+{% endblock %}

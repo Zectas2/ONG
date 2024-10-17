@@ -1,0 +1,33 @@
+.navbar-margin{
+    margin: 0 1rem;
+}
+
+header{
+    margin-bottom: 2rem;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.card-body a{
+    display: flex;
+    justify-content: center;
+}
+
+.simple{
+    text-decoration: none;
+}
+

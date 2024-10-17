@@ -1,0 +1,47 @@
+{% extends 'ongCrowndfunding/base.html' %}
+{% load static %}
+
+
+{% block 'title' %}
+<title>Gestión de Campañas - ONG-Crowdfunding</title>
+{% endblock %}
+    
+
+{% block 'content' %}
+        <h1>Gestión de Campañas</h1>
+        
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre de Campaña</th>
+                    <th>Descripción</th>
+                    <th>Objetivo</th>
+                    <th>Donaciones Recibidas</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fundaciones in fundaciones %} 
+                    <tr>
+                        <th><img src="{{ fundaciones.imagen }}" alt="" height="100px" width="150px"></th>
+                        <td>{{ fundaciones.nombre }}</td>
+                        <td>{{ fundaciones.descripcion }}</td>
+                        <td>{{ fundaciones.objetivo }}</td>
+                        <td>{{ fundaciones.total_donado }}</td>
+                        {% if fundaciones.estado %}
+                        <td>Activa</td>
+                        {% else %}
+                        <td>Finalizada</td>
+                        {% endif %}
+                        <td>
+                            <button class="btn btn-info btn-sm"> <a class="text-reset text-dark" href="{% url 'reportes' %}">Ver Detalles</a></button>
+                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+{% endblock %}
